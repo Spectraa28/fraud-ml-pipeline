@@ -25,10 +25,10 @@ def predict(transaction: Transaction):
         raise HTTPException(status_code=400, detail= f"Expected 30 features, got {len(transaction.features)}")
     start = time.time()
     data  = np.array(transaction.features).reshape(1,-1)
-    amount_time = np.array([[data[0][0], data[0][29]]])  # shape (1,2)
+    amount_time = np.array([[data[0][29], data[0][0]]])  # shape (1,2)
     scaled_amount_time = scaler.transform(amount_time)
-    data[0][0] = scaled_amount_time[0][0]   # put Time back
-    data[0][29] = scaled_amount_time[0][1]  # put Amount back
+    data[0][29] = scaled_amount_time[0][0]   # put Time back
+    data[0][0] = scaled_amount_time[0][1]  # put Amount back
     v14 = data[0][14]
     v14_alert = bool(abs(v14) > 2.88)
     probability = model.predict_proba(data)[0][1]
