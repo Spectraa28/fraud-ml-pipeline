@@ -2,8 +2,8 @@
 
 XGBoost fraud detection model served as a production REST API — FastAPI + Docker + Railway
 
-🔴 **Live API:** https://fraud-api-production-8f79.up.railway.app/health  
-📊 **Swagger UI:** https://fraud-api-production-8f79.up.railway.app/docs
+🔴 **Live API:** [https://fraud-api-production-8f79.up.railway.app/](https://fraud-ml-pipeline.onrender.com)health  
+📊 **Swagger UI:** [https://fraud-api-production-8f79.up.railway.app/docs](https://fraud-ml-pipeline.onrender.com)/docs
 
 ---
 
